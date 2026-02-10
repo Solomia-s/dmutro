@@ -1,0 +1,142 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY + ФОН */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #111;
+
+  /* ФОНОВА КАРТИНКА — ТА, ЩО ТИ ДАЛА */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT232_K_eRUVKYNcCyTOuAeSlBxyhpmMhRnYg&s");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* НАПІВПРОЗОРИЙ ШАР (ДУЖЕ ЛЕГКИЙ) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55); /* ще більш прозоро */
+  z-index: -1;
+}
+
+/* HEADER */
+header {
+  padding: 50px 20px 30px;
+  text-align: center;
+}
+
+.name {
+  font-size: 42px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  border-left: 5px solid #111;
+  display: inline-block;
+  padding-left: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+/* MAIN */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ЗАГОЛОВОК MAIN */
+main > h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+/* ОСНОВНИЙ КОНТЕНТ */
+.info {
+  background: rgba(255, 255, 255, 0.75); /* напівпрозорий блок */
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* СЕКЦІЇ */
+.info section {
+  margin-bottom: 30px;
+}
+
+/* КАРТИНКИ */
+.io,
+.info img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  margin-bottom: 14px;
+}
+
+/* ТЕКСТ */
+.info p {
+  font-size: 15px;
+  color: #333;
+  white-space: pre-line;
+}
+
+/* H2 */
+.info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-left: 4px solid #111;
+  padding-left: 10px;
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+  .name {
+    font-size: 32px;
+  }
+
+  main > h1 {
+    font-size: 22px;
+  }
+
+  .info {
+    padding: 18px;
+  }
+}
+/* КНОПКА ПЕРЕХОДУ */
+.back-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 18px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+
+  border: 2px solid #111;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+
